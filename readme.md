@@ -18,11 +18,28 @@ sudo docker container create -i -t --name dam_alp1 alpine 	# crear contenedor co
 sudo docker container start --attach -i dam_alp1		# iniciar y acceder al contenedor
 ```
 ### Comprueba que ip tiene y si puedes hacer un ping a google.com
-
+```sh
+sudo docker container start --attach -i dam_alp1	# iniciar y acceder al contenedor
+ip a							# comprobar ip
+ping google.com						# hacer ping
+```
 ### Crea un contenedor con el nombre 'dam_alp2'. ¿Puedes hacer ping entre los contenedores?
-
+```sh
+sudo docker container start --attach -i dam_alp1 		# acceder al contenedor dam_alp1
+```
+y en otra terminal
+```sh
+sudo docker container create -i -t --name dam_alp2 alpine	# crear contenedor dam_alp2
+sudo docker container start --attach -i dam_alp2 		# acceder al contenedor dam_alp2
+```
+y ahora tenemos que ejecutar en los 2 contenedores:
+```sh
+ip a			# comprobar ip
+ping 172.17.0.2		# hacer ping a el otro contenedor
+```
 ### Sal del terminal, ¿que ocurrió con el contenedor?
-
+Control + d: Se detiene el contenedor
+Cerrar terminal: Se sigue ejecutando en el fondo
 ### ¿Cuanta memoria en el disco duro ocupaste?
 
 ### ¿Cuanta RAM ocupan los contenedores? ¿Hay algún comando docker para saber esto?.
