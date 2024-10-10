@@ -39,6 +39,7 @@ ping 172.17.0.2		# hacer ping a el otro contenedor
 ```
 ### Sal del terminal, ¿que ocurrió con el contenedor?
 Control + d: Se detiene el contenedor
+
 Cerrar terminal: Se sigue ejecutando en el fondo
 ### ¿Cuanta memoria en el disco duro ocupaste?
 ```sh
