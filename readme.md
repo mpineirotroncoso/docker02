@@ -1,10 +1,17 @@
 ### Descarga la imagen "alpine" SIN ARRANCARLA y comprueba que está en tu equipo
 ```sh
-sudo docker image pull alpine # descargar imagen
-sudo docker image ls # mostrar todas las imagenes instaladas
+sudo docker image pull alpine	# descargar imagen
+sudo docker image ls		# mostrar todas las imagenes instaladas
 ```
 ### Crea un contenedor sin ponerle nombre. ¿está arrancado? Obtén el nombre
-
+```sh
+sudo docker container create -i -t alpine	# crear contenedor
+sudo docker ps -a				# mostrar todos los contenedores
+```
+Al crear el contenedor está detenido, se puede iniciar con
+```sh
+sudo docker container start <nombre contenedor>
+```
 ### Crea un contenedor con el nombre 'dam_alp1'. ¿Como puedes acceder a él?
 
 ### Comprueba que ip tiene y si puedes hacer un ping a google.com
