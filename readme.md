@@ -47,6 +47,6 @@ sudo docker system df -v	# comprobar el espacio en disco que ocupan las imagenes
 Los contenedores pesan unos cuantos bytes, practicamente nada y la imagen de alpine unos 7.8MB, aunque tenga 2 contenedores solo necesito una imagen de alpine
 ### ¿Cuanta RAM ocupan los contenedores? ¿Hay algún comando docker para saber esto?.
 ```sh
-sudo docker stats
+sudo docker stats 		# comprobar uso de cpu, ram, nombre, red, disco, etc. de cada contenedor
 ```
 Cada contenedor consume 512KiB de memoria RAM
