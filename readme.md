@@ -41,5 +41,12 @@ ping 172.17.0.2		# hacer ping a el otro contenedor
 Control + d: Se detiene el contenedor
 Cerrar terminal: Se sigue ejecutando en el fondo
 ### ¿Cuanta memoria en el disco duro ocupaste?
-
+```sh
+sudo docker system df -v	# comprobar el espacio en disco que ocupan las imagenes y contenedores
+```
+Los contenedores pesan unos cuantos bytes, practicamente nada y la imagen de alpine unos 7.8MB, aunque tenga 2 contenedores solo necesito una imagen de alpine
 ### ¿Cuanta RAM ocupan los contenedores? ¿Hay algún comando docker para saber esto?.
+```sh
+sudo docker stats
+```
+Cada contenedor consume 512KiB de memoria RAM
